@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react-frontendmentor--ip-address-tracker/static/css/main.f26fa95d.chunk.css",
-    "main.js": "/react-frontendmentor--ip-address-tracker/static/js/main.494cbc1f.chunk.js",
-    "main.js.map": "/react-frontendmentor--ip-address-tracker/static/js/main.494cbc1f.chunk.js.map",
+    "main.js": "/react-frontendmentor--ip-address-tracker/static/js/main.0c0aa6e0.chunk.js",
+    "main.js.map": "/react-frontendmentor--ip-address-tracker/static/js/main.0c0aa6e0.chunk.js.map",
     "runtime-main.js": "/react-frontendmentor--ip-address-tracker/static/js/runtime-main.e9b97d3b.js",
     "runtime-main.js.map": "/react-frontendmentor--ip-address-tracker/static/js/runtime-main.e9b97d3b.js.map",
     "static/js/2.a876e756.chunk.js": "/react-frontendmentor--ip-address-tracker/static/js/2.a876e756.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.e9b97d3b.js",
     "static/js/2.a876e756.chunk.js",
     "static/css/main.f26fa95d.chunk.css",
-    "static/js/main.494cbc1f.chunk.js"
+    "static/js/main.0c0aa6e0.chunk.js"
   ]
 }
