@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/react-frontendmentor--ip-address-tracker/static/css/main.f26fa95d.chunk.css",
+    "main.js": "/react-frontendmentor--ip-address-tracker/static/js/main.494cbc1f.chunk.js",
+    "main.js.map": "/react-frontendmentor--ip-address-tracker/static/js/main.494cbc1f.chunk.js.map",
+    "runtime-main.js": "/react-frontendmentor--ip-address-tracker/static/js/runtime-main.e9b97d3b.js",
+    "runtime-main.js.map": "/react-frontendmentor--ip-address-tracker/static/js/runtime-main.e9b97d3b.js.map",
+    "static/js/2.a876e756.chunk.js": "/react-frontendmentor--ip-address-tracker/static/js/2.a876e756.chunk.js",
+    "static/js/2.a876e756.chunk.js.map": "/react-frontendmentor--ip-address-tracker/static/js/2.a876e756.chunk.js.map",
+    "index.html": "/react-frontendmentor--ip-address-tracker/index.html",
+    "static/css/main.f26fa95d.chunk.css.map": "/react-frontendmentor--ip-address-tracker/static/css/main.f26fa95d.chunk.css.map",
+    "static/js/2.a876e756.chunk.js.LICENSE.txt": "/react-frontendmentor--ip-address-tracker/static/js/2.a876e756.chunk.js.LICENSE.txt",
+    "static/media/icon-location.7e6459d2.svg": "/react-frontendmentor--ip-address-tracker/static/media/icon-location.7e6459d2.svg",
+    "static/media/pattern-bg.a60a3c85.png": "/react-frontendmentor--ip-address-tracker/static/media/pattern-bg.a60a3c85.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e9b97d3b.js",
+    "static/js/2.a876e756.chunk.js",
+    "static/css/main.f26fa95d.chunk.css",
+    "static/js/main.494cbc1f.chunk.js"
+  ]
+}
