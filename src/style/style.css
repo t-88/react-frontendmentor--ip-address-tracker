@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+.IpAddrTracker {
+  position: relative;
+  z-index: 2;
+  color: white;
+  height: clamp(300px ,calc( 300 * 1px + -80 * ((100vw - 1823px)) / -1055),220px);
+}
+.IpAddrTracker__img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+.IpAddrTracker__text {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .IpAddrTracker__text {
+    font-size: clamp(13px ,calc( 13 * 1px + 5 * ((100vw - 320px)) / 448),18px);
+  }
+}
+.IpAddrTracker__text h1 {
+  font-weight: 500;
+  font-size: 2em;
+}
+.IpAddrTracker__text__input {
+  display: flex;
+  background: white;
+  width: max(30%, 500px);
+  border-radius: 15px;
+}
+@media (max-width: 768px) {
+  .IpAddrTracker__text__input {
+    width: 90%;
+  }
+}
+.IpAddrTracker__text__input ::placeholder {
+  color: #969696;
+}
+.IpAddrTracker__text__input input {
+  border: none;
+  outline: none;
+  width: 90%;
+  font-size: 18px;
+  padding: 20px;
+  color: #2b2b2b;
+  border-radius: 15px;
+}
+@media (max-width: 768px) {
+  .IpAddrTracker__text__input input {
+    font-size: 1em;
+    padding-right: 0;
+  }
+}
+.IpAddrTracker__text__input__img {
+  width: 10%;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 0 15px 15px 0;
+}
+.IpAddrTracker__text__input__img:hover {
+  background-color: #2b2b2b;
+}
+.IpAddrTracker__text__input__img .img--loading {
+  display: none;
+}
+.IpAddrTracker__text__input__img--loading {
+  background-color: #4c4c4c;
+  cursor: pointer;
+}
+.IpAddrTracker__text__input__img--loading:hover {
+  background-color: #4c4c4c;
+}
+.IpAddrTracker__text__input__img--loading .img--ready {
+  display: none;
+}
+.IpAddrTracker__text__input__img--loading .img--loading {
+  display: block;
+  width: 25px;
+  animation: loop 500ms infinite forwards ease-in-out;
+}
+@keyframes loop {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (max-width: 768px) {
+  .IpAddrTracker__text__input__img {
+    width: max(10%, 45px);
+  }
+}
+.IpAddrTracker__data {
+  position: absolute;
+  width: max(750px, 80%);
+  height: fit-content;
+  background: white;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  box-shadow: rgba(150, 150, 150, 0.15) 0 30px 15px -10px;
+  border-radius: 20px;
+  display: flex;
+  padding: 2.2% 1.8%;
+  gap: 2.5%;
+  font-size: clamp(9px ,calc( 9 * 1px + 9 * ((100vw - 768px)) / 1055),18px);
+  max-height: 285px;
+}
+@media (max-width: 768px) {
+  .IpAddrTracker__data {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+    top: 0;
+    margin-top: 1%;
+    width: max(50%, 280px);
+    padding: max(3%, 20px);
+    font-size: clamp(10px ,calc( 10 * 1px + 1 * ((100vw - 320px)) / 448),11px);
+    max-height: max-content;
+  }
+}
+
+.Card {
+  color: black;
+  flex: 1 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: max(1.1em, 14px);
+  font-weight: 500;
+}
+@media (max-width: 768px) {
+  .Card {
+    gap: 10px;
+  }
+}
+.Card h3 {
+  color: #969696;
+  font-size: max(1em, 14px);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.Card p {
+  font-size: 2em;
+  color: #2b2b2b;
+  width: 95%;
+}
+@media (max-width: 768px) {
+  .Card p {
+    width: 100%;
+  }
+}
+@media (min-width: 769px) {
+  .Card:last-child p {
+    width: 85%;
+  }
+}
+.Card:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 85%;
+  background: #969696;
+  opacity: 0.5;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+}
+@media (max-width: 768px) {
+  .Card:not(:last-child)::after {
+    display: none;
+  }
+}
+
+.MapContainer {
+  height: 100vh;
+  min-height: 400px;
+}
+
+.leaflet-container {
+  z-index: 1;
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  width: 100%;
+  min-width: 320px;
+  height: 100vh;
+  font-size: 18px;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+}
+
+/*# sourceMappingURL=style.css.map */

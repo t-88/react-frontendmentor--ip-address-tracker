@@ -1,0 +1,14 @@
+$pc: 1823;
+$tablet: 768;
+$phone: 320;
+$min-width: 320;
+$breakpoints: ("pc":$pc * 1px,"min-width":$min-width * 1px,"phone": $phone * 1px,"tablet": $tablet * 1px);
+
+
+@function applyMath($max_val,$min_val,$max_width,$min_width,$unit: 1px){
+    @return clamp(#{$min_val *1px} ,calc( #{$min_val} * #{$unit} + #{$max_val - $min_val} * ((100vw - #{$min_width}px)) / #{$max_width - $min_width}),#{$max_val * 1px});
+}
+
+@function mathFromPcToTablet($start-val,$end-val,$unit: 1px) { @return applyMath($start-val,$end-val,$pc,$tablet,$unit); }
+@function mathFromTabletToPhone($start-val,$end-val,$unit: 1px) { @return applyMath($start-val,$end-val,$tablet,$phone,$unit); }
+@function mathFromPhoneToMinWidth($start-val,$end-val,$unit: 1px) { @return applyMath($start-val,$end-val,$phone,$min-width,$unit); }

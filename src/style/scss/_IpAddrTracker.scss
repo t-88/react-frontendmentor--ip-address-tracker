@@ -1,0 +1,168 @@
+.IpAddrTracker {
+    position: relative;
+    z-index: 2;
+    color: white;
+    height: applyMath(220,300,$tablet,$pc);
+
+
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+    }
+    &__text {
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+        @include media("<=tablet") {
+            font-size: applyMath(18,13,$tablet,$phone);
+        }
+        h1 {
+            font-weight: 500;
+            font-size: 2em;
+        }
+        &__input {
+            $border-raduis: 15px;
+            display: flex;
+            background: white;
+            width: max(30%,500px);
+            border-radius: $border-raduis;
+            @include media("<=tablet") {
+                width: 90%;
+            }
+            ::placeholder {
+                color: $Dark-Gray;
+            }
+            input {
+                border: none;
+                outline: none;
+                width: 90%;
+                font-size: 18px;
+                padding: 20px;
+                color: $Very-Dark-Gray;
+                border-radius: $border-raduis;
+                @include media("<=tablet") {
+                    font-size: 1em;
+                    padding-right: 0;
+                }
+                
+            }
+            &__img {
+                width: 10%;
+                background: black;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                border-radius: 0 $border-raduis $border-raduis 0;
+                &:hover { background-color: $Very-Dark-Gray; }
+                .img--loading { display: none; }
+                &--loading {
+                    background-color: #4c4c4c;
+                    cursor: pointer;
+                    &:hover { background-color: #4c4c4c; }
+                    .img--ready { display: none; }
+                    .img--loading {
+                        @keyframes loop {
+                            from { transform: rotate(0deg); }
+                            to { transform: rotate(360deg); }
+                        }
+                        display: block;
+                        width: 25px;
+                        animation: loop 500ms infinite forwards ease-in-out;
+                    }
+                }
+                
+                @include media("<=tablet") {
+                    width: max(10%,45px)
+                }
+            }
+        }
+    }
+    &__data {
+        position: absolute;
+        width: max(750px,80%);
+        height: fit-content;
+        background: white;
+        bottom: 0%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        box-shadow: hsl(0deg 0% 59% / 15%) 0 30px 15px -10px;
+        border-radius: 20px;
+        display: flex;
+        padding: 2.2% 1.8%;
+        gap: 2.5%;
+        font-size: applyMath(18,9,$pc,$tablet);
+        max-height: 285px;
+
+        @include media("<=tablet") {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 25px;
+            top: 0;
+            margin-top: 1%;
+            width: max(50%,280px);
+            padding: max(3%,20px);
+            font-size: applyMath(11,10,$tablet,$phone);
+            max-height: max-content;
+
+        }
+    }
+}
+
+.Card {
+    color: black;
+    flex: 1 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: max(1.1em,14px);
+    font-weight: 500;
+
+    @include media("<=tablet") {
+        gap: 10px;
+    }
+
+    h3 {
+        color: $Dark-Gray;
+        font-size: max(1em,14px);
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+    p {
+        font-size: 2em;
+        color: $Very-Dark-Gray;
+        width: 95%;
+        @include media("<=tablet") {
+            width: 100%;
+        }
+    }
+    &:last-child p {
+        @include media(">tablet") {
+            width: 85%;
+        }
+    }
+    &:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 85%;
+        background: $Dark-Gray;
+        opacity: 0.5;
+        top: 50%;
+        right: 0;
+        transform: translate(0, -50%);
+        @include media("<=tablet"){
+            display: none;
+        }
+    }
+}
